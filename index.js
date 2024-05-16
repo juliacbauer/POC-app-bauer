@@ -1,6 +1,7 @@
 document.getElementById('movieSearch').onsubmit = async function (e) {
     e.preventDefault()
     const searchQuery = document.getElementById('query').value.trim()
+    //testing rebuild
     const res = await fetch(`https://www.omdbapi.com/?apikey=6c6b5196&s=${searchQuery}`)
     const data = await res.json()
     console.log(data)
