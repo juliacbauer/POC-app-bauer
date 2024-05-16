@@ -1,7 +1,7 @@
 document.getElementById('movieSearch').onsubmit = async function (e) {
     e.preventDefault()
     const searchQuery = document.getElementById('query').value.trim()
-    const res = await fetch(`http://www.omdbapi.com/?apikey=6c6b5196&s=${searchQuery}`)
+    const res = await fetch(`https://www.omdbapi.com/?apikey=6c6b5196&s=${searchQuery}`)
     const data = await res.json()
     console.log(data)
     if (data.Response === "True") {
@@ -17,7 +17,7 @@ async function searchResults(movies) {
     const movieMore = document.getElementById('movieInfo')
     movieMore.innerHTML = ""
     movies.forEach(async (movie) => {
-        const movieMoreResults = await fetch(`http://www.omdbapi.com/?apikey=6c6b5196&i=${movie.imdbID}`)
+        const movieMoreResults = await fetch(`https://www.omdbapi.com/?apikey=6c6b5196&i=${movie.imdbID}`)
         const movieMoreInfo = await movieMoreResults.json()
         console.log(movieMoreInfo)
         movieMore.innerHTML +=
