@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>POC App</title>
+</head>
+
+<body>
+    <div class="centerInfo">
+        <br>
+        <h1>POC App</h1>
+        <h2><a href="https://www.omdbapi.com/" target="_blank">OMDB API</a> Movie and Show Search Test</h2>
+        <p>Search by keyword to see the following for movies and shows:</p>
+        <div class="list">
+            <ul>
+                <li>Title</li>
+                <li>Poster</li>
+                <li>Year of release</li>
+                <li>IMDB score</li>
+                <li>Genres</li>
+                <li>Cast members</li>
+                <li>Plot summary</li>
+                <li>Awards</li>
+            </ul>
+        </div>
+        <br>
+        <form id="movieSearch">
+            <input type="text" id="query" placeholder="Search by keyword">
+            <button type="submit">Search</button>
+        </form>
+        <div class="movieInfo">
+            <div id="movieInfo"></div>
+        </div>
+    </div>
+</body>
+
+<script src="index.js" defer></script>
+
+</html>
